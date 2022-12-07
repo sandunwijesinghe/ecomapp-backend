@@ -7,7 +7,9 @@ let dbconnection = require("./db");
 let productsRoute = require("./routes/productRoutes");
 let userRoute = require("./routes/userRoute")
 let orderRoute = require("./routes/orderRoute");
+let cors = require('cors')
 
+app.use(cors())
 
 app.use(bodyParser.json());
 app.use("/api/products/", productsRoute);
